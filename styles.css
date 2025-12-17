@@ -1,0 +1,13 @@
+
+/* Custom styles for Ansen's site */
+body { font-family: 'Montserrat', Georgia, serif; color: #222; }
+.bg-primary { background-color: #0b3d91 !important; } /* pleasant navy */
+.navbar-brand { font-weight:700; }
+.hero { background: linear-gradient(90deg, rgba(11,61,145,0.08), rgba(255,255,255,0.8)); }
+.profile-img { width: 160px; height:160px; object-fit:cover; border:4px solid #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.scratch-hero { background-color:#f7f9fc; padding:2rem 0; margin-bottom:1rem; border-bottom:1px solid #e6eefc; }
+.container { max-width: 900px; }
+.video-wrap iframe { max-width:100%; }
+.tableau-wrap iframe { border:1px solid #ddd; background:#fff; }
+.card { background:#fff; border-radius:8px; }
+@media (max-width:600px){ .profile-img{ width:120px; height:120px; } }

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Joke Generator — Ansen</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <main class="container my-4">
+    <a href="scratch.html">&larr; Back to scratch page</a>
+    <h1>Joke Generator</h1>
+    <p>Click the button to get a random joke. Jokes are family friendly.</p>
+
+    <div id="joke-card" class="card my-4 p-3">
+      <p id="joke-text">Press the button for a joke.</p>
+    </div>
+
+    <div class="d-flex gap-2">
+      <button id="new-joke" class="btn btn-primary">New Joke</button>
+      <button id="copy-joke" class="btn btn-secondary">Copy Joke</button>
+    </div>
+
+    <p class="mt-4"><small>Built as part of the BYU coding project.</small></p>
+  </main>
+
+<script>
+const jokes = [
+  "Why did the scarecrow become an accountant? Because he was outstanding in his field!",
+  "Why did the computer get cold at work? It left its Windows open!",
+  "Why don’t scientists trust atoms? Because they make up everything!",
+  "What do you call fake spaghetti? An impasta!",
+  "Why did the math book look sad? Because it had too many problems."
+];
+
+function newJoke(){
+  const j = jokes[Math.floor(Math.random()*jokes.length)];
+  document.getElementById('joke-text').textContent = j;
+}
+
+document.getElementById('new-joke').addEventListener('click', newJoke);
+document.getElementById('copy-joke').addEventListener('click', ()=>{
+  navigator.clipboard?.writeText(document.getElementById('joke-text').textContent || '');
+  alert('Joke copied to clipboard!');
+});
+</script>
+
+</body>
+</html>
